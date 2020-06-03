@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">khadamat</string>
+    <string name="phone">Phone</string>
+    <string name="password">كلمة المرور</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="username">الاسم</string>
+    <string name="nationalnum">رقم الهوية</string>
+    <string name="address">العنوان</string>
+    <string name="register">انشاء حساب</string>
+    <string name="checkNetworkConnection">تاكد من الاتصال بالانترنت</string>
+    <string name="validate_name">ادخل الاسم</string>
+    <string name="validate_national_num">ادخل رقم الهوية</string>
+    <string name="validate_address">ادخل العنوان</string>
+    <string name="validate_password">كلمة المرور ضعيفة</string>
+    <string name="validate_phone">رقم الهاتف غير صحيح</string>
+</resources>

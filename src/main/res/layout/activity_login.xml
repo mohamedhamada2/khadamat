@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="loginpresenter"
+            type="com.example.khadamat.viewmodel.LoginPresenter" />
+        <variable
+            name="loginviewmodel"
+            type="com.example.khadamat.viewmodel.LoginViewModel" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:onClick="Back"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:textSize="18sp"
+                android:text="@string/login"/>
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:background="@drawable/logo"
+                    android:layout_marginTop="20dp"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="20dp"
+                    app:passwordToggleEnabled="true">
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/txt_login_background"
+                        android:drawableStart="@drawable/phone_img"
+                        android:hint="@string/phone"
+                        android:textColorHint="@color/lightsilver"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textStyle="normal"
+                        android:inputType="phone"
+                        android:paddingStart="10dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    app:passwordToggleEnabled="true">
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/txt_login_background"
+                        android:drawableRight="@drawable/password_img"
+                        android:hint="@string/password"
+                        android:theme="@style/AppTheme"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:textStyle="normal"
+                        android:inputType="textPassword"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/lightsilver"
+                        android:drawableStart="@drawable/password_img"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:layout_width="280dp"
+                    android:layout_height="50dp"
+                    android:background="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="40dp"
+                    android:elevation="10dp"
+                    android:shadowColor="@color/black"
+                    android:onClick="@{(v) -> loginpresenter.LoginData()}"
+                    android:text="@string/login"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/password"
+                    android:onClick="go_to_register" />
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>
+
